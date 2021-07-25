@@ -54,7 +54,7 @@ function getArray(stringOrArray: string[] | string | undefined): string[] {
 }
 
 function getDefaultImages(images: string[], _theme: Theme): string[] {
-  const defaultImage = "https://indent.com/static/images/favicon.png";
+  const defaultImage = "https://indent.com/static/favicon.png";
 
   if (!images || !images[0]) {
     return [defaultImage];
