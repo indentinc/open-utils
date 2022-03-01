@@ -37,7 +37,7 @@ Make sure you have access to your Okta Domain URL and your Okta Admin API Token.
 Use the app like this:
 
 ```bash
-create-okta-app --domain dev-123456.okta.com --token 00asdfghjklqwertyuiop
+npx create-okta-app --domain dev-123456.okta.com --token 00asdfghjklqwertyuiop --scope "okta.users.manage okta.groups.manage okta.apps.read"
 ```
 
 These are the additional options:
@@ -46,5 +46,5 @@ These are the additional options:
 --name okta_service_app # Rename your app
 --keyid 789012 # Add a unique identifier for your JWK
 --keysize 2048 # Increase the number of bits for your JWK
---scope okta.users.manage or okta.groups.manage # Used to manage users or groups
+--scope "okta.users.manage okta.groups.manage okta.apps.read" # Used to manage users, app users and groups
 ```
