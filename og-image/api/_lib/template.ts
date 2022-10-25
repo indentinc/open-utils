@@ -143,6 +143,7 @@ function getCss(theme: string, fontSize: string) {
         font-weight: 500;
         color: ${foreground};
         line-height: 1.45;
+        transform: translateY(75px);
     }`;
 }
 
