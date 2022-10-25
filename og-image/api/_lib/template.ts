@@ -54,6 +54,7 @@ function getCss(theme: string, fontSize: string) {
       }
 
     body {
+        margin: 0;
         position: relative;
         height: 100vh;
         display: flex;
@@ -139,7 +140,7 @@ function getCss(theme: string, fontSize: string) {
         font-weight: 500;
         color: ${foreground};
         line-height: 1.45;
-        transform: translateY(75px);
+        transform: translateY(85px);
     }`
 }
 
