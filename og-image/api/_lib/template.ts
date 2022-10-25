@@ -90,7 +90,7 @@ function getCss(theme: string, fontSize: string) {
 
     code {
         color: #D400FF;
-        font-family: 'Vera';
+        font-family: 'monospace';
         white-space: pre-wrap;
         letter-spacing: -5px;
     }
