@@ -349,6 +349,7 @@ function LiveEditor({ id }: { id: string }) {
           modelUri // Pass the file name to the model here.
         )
         _monaco.languages.typescript.typescriptDefaults.setCompilerOptions({
+          //@ts-ignore
           jsx: 'react',
         })
         _monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions(
