@@ -11,7 +11,6 @@ const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString
 const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
 const medi = readFileSync(`${__dirname}/../_fonts/Inter-Medium.woff2`).toString('base64');
 const semi = readFileSync(`${__dirname}/../_fonts/Inter-Medium.woff2`).toString('base64');
-const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
 const png =  readFileSync(`${__dirname}/../images/bg.png`).toString('base64');
 
 function getCss(theme: string, fontSize: string) {
@@ -35,13 +34,6 @@ function getCss(theme: string, fontSize: string) {
         font-weight: bold;
         src: url(data:font/woff2;charset=utf-8;base64,${bold}) format('woff2');
     }
-
-    @font-face {
-        font-family: 'Vera';
-        font-style: normal;
-        font-weight: normal;
-        src: url(data:font/woff2;charset=utf-8;base64,${mono})  format("woff2");
-      }
 
     @font-face {
         font-family: 'Inter';
