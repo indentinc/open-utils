@@ -15,13 +15,14 @@ const medi = readFileSync(`${__dirname}/../_fonts/Inter-Medium.woff2`).toString(
 const semi = readFileSync(`${__dirname}/../_fonts/Inter-Medium.woff2`).toString(
   'base64'
 )
-const png = readFileSync(`${__dirname}/../images/bg.png`).toString('base64')
+const darkBg = readFileSync(`${__dirname}/../images/bg.png`).toString('base64')
+const lightBg = readFileSync(`${__dirname}/../images/bg-light.png`).toString('base64')
 
 function getCss(theme: string, fontSize: string) {
   let foreground = 'white'
 
-  if (theme === 'dark') {
-    foreground = 'white'
+  if (theme === 'light') {
+    foreground = 'black'
   }
 
   return `
@@ -71,8 +72,8 @@ function getCss(theme: string, fontSize: string) {
         width: 100vw;
         height: 100vh;
         content: ' ';
-        background: #000;
-        background-image: url(data:image/png;base64,${png});
+        background: ${theme === 'light' ? '#fff;' : `#000;`}
+        background-image: url(data:image/png;base64,${theme === 'light' ? lightBg : darkBg});
         background-size: 150% 150%;
         background-position: 50% 0;
     }
